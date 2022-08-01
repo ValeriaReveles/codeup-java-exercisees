@@ -25,5 +25,13 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+# MacOS
 .DS_Store
+
+# IntelliJ
+.idea/*
+*.iml
+
+# Compiled output
+*.class
+out/*
