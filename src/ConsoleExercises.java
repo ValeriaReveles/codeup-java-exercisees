@@ -17,12 +17,12 @@ public class ConsoleExercises {
 
         //Exercise 2, prompt for 3 words:
 //        scanner.nextLine();
-        System.out.println("Please enter 3 words: ");
-        String userWord = scanner.nextLine();
-        System.out.printf("You entered %s", userWord);
+//        System.out.println("Please enter 3 words: ");
+//        String userWord = scanner.nextLine();
+//        System.out.printf("You entered %s", userWord);
 
         //Exercise 2, calculate perimeter:
-        scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Please enter the length and width: ");
         String width = scanner.nextLine();
         System.out.println(width);
@@ -31,8 +31,10 @@ public class ConsoleExercises {
         System.out.println(height);
 //        int number2 = parseInt(height);
         int total = parseInt(width)* parseInt(height);
+        int total2 = parseInt(width) * 2 + parseInt(height) * 2;
 
-        System.out.printf("The perimeter: %d \n", total);
+        System.out.printf("The area: %d \n", total);
+        System.out.printf("The perimeter: %d \n", total2);
 
 
     }
