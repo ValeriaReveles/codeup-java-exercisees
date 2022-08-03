@@ -10,7 +10,7 @@ public class Bob {
             System.out.println("Sure.");
         } else if (input.endsWith("!")){
             System.out.println("Whoa, chill out!");
-        } else if (input.equals("")){
+        } else if (input.equals("") || input.isBlank()){
             System.out.println("Fine. Be that way!");
         }else{
             System.out.println("Whatever");
