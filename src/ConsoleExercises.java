@@ -22,14 +22,17 @@ public class ConsoleExercises {
         System.out.printf("You entered %s", userWord);
 
         //Exercise 2, calculate perimeter:
-//        scanner.nextLine();
-//        System.out.println("Please enter the length and width: ");
-//        String width = scanner.nextLine();
+        scanner.nextLine();
+        System.out.println("Please enter the length and width: ");
+        String width = scanner.nextLine();
+        System.out.println(width);
 //        int number1 = parseInt(width);
-//        String height = scanner.nextLine();
+        String height = scanner.nextLine();
+        System.out.println(height);
 //        int number2 = parseInt(height);
-//        int total = number1 * number2;
-//        System.out.printf("The perimeter: %d \n", total);
+        int total = parseInt(width)* parseInt(height);
+
+        System.out.printf("The perimeter: %d \n", total);
 
 
     }
