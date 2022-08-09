@@ -2,6 +2,7 @@ package util;
 
 import java.util.Scanner;
 
+
 //Everything goes inside class input
 public class Input {
 
@@ -20,8 +21,14 @@ public class Input {
 
     public boolean yesNo() {
         System.out.println("Y/N? ");
-        String userChoice = scanner.next().toLowerCase();
+        String userChoice = this.scanner.next().toLowerCase();
         return userChoice.equals("y") || userChoice.equals("yes");
+    }
+
+
+    public int getInt(){
+        System.out.println("your int is: ");
+        return this.scanner.nextInt();
     }
 
     public int getInt(int min, int max) {
@@ -36,6 +43,28 @@ public class Input {
         } else {
             System.out.println("Your number is: " + userInput);
             return userInput;
+        }
+    }
+
+    //double get int:
+    public double getDouble(){
+        System.out.println("your int is: ");
+        return this.scanner.nextDouble();
+    }
+
+
+    public double getDouble(int min, int max) {
+
+        System.out.println("Enter a double between " + min + " and " + max);
+
+        double userDouble = this.scanner.nextDouble();
+
+        if (userDouble < min || userDouble > max) {
+            System.out.println("That's not in-between 1 and 10...");
+            return getInt(min, max);
+        } else {
+            System.out.println("Your number is: " + userDouble);
+            return userDouble;
         }
     }
 
