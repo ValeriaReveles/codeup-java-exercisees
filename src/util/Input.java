@@ -21,7 +21,22 @@ public class Input {
     public boolean yesNo() {
         System.out.println("Y/N? ");
         String userChoice = scanner.next().toLowerCase();
-        return userChoice.equals("y");
+        return userChoice.equals("y") || userChoice.equals("yes");
+    }
+
+    public int getInt(int min, int max) {
+
+        System.out.println("Enter a number between " + min + " and " + max);
+
+        int userInput = this.scanner.nextInt();
+
+        if (userInput < min || userInput > max) {
+            System.out.println("That's not in-between 1 and 10...");
+            return getInt(min, max);
+        } else {
+            System.out.println("Your number is: " + userInput);
+            return userInput;
+        }
     }
 
 
