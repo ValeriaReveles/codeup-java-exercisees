@@ -11,31 +11,33 @@ public class Input {
 
     //Input method initializes the scanner, without it the scanner won't run, java will not compile.
     public Input() {
+
         this.scanner = new Scanner(System.in);
+
         }
 
     public String getString(){
         System.out.println("Enter something: ");
-        return this.scanner.nextLine();
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
         System.out.println("Y/N? ");
-        String userChoice = this.scanner.next().toLowerCase();
+        String userChoice = scanner.next().toLowerCase();
         return userChoice.equals("y") || userChoice.equals("yes");
     }
 
 
     public int getInt(){
-        System.out.println("your int is: ");
-        return this.scanner.nextInt();
+//        System.out.println("your int is: ");
+        return scanner.nextInt();
     }
 
     public int getInt(int min, int max) {
 
         System.out.println("Enter a number between " + min + " and " + max);
 
-        int userInput = this.scanner.nextInt();
+        int userInput = scanner.nextInt();
 
         if (userInput < min || userInput > max) {
             System.out.println("That's not in-between 1 and 10...");
@@ -48,16 +50,16 @@ public class Input {
 
     //double get int:
     public double getDouble(){
-        System.out.println("your int is: ");
-        return this.scanner.nextDouble();
+//        System.out.println("your int is: ");
+        return scanner.nextDouble();
     }
 
 
     public double getDouble(int min, int max) {
 
-        System.out.println("Enter a double between " + min + " and " + max);
+        System.out.println("Enter a decimal number between " + min + " and " + max);
 
-        double userDouble = this.scanner.nextDouble();
+        double userDouble = scanner.nextDouble();
 
         if (userDouble < min || userDouble > max) {
             System.out.println("That's not in-between 1 and 10...");
