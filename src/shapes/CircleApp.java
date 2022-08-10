@@ -19,7 +19,20 @@ public class CircleApp {
         //this is to print circumference with circle and radius passed:
         System.out.println(circle.getCircumference());
 
-        //Bonus: prompt user to continue creating circle with yesNo() until they say no. Before exiting, program should output the number of circles created:
+        //Bonus: prompt user to continue creating circle with yesNo() until they say no. Before exiting, program should output the number of circles created. To do this, refactor code into loop:
+
+//        while(true) {
+//            double radius = input.getDouble("Enter radius of circle: ");
+//            Circle circle = new Circle(radius);
+//            System.out.println(circle.getArea());
+//            System.out.println(circle.getCircumference());
+//
+//            // ask user if they want to keep making circles
+//            boolean keepMakingCircles = input.yesNo("Do you want to keep making circles? yes/no ");
+//            if(keepMakingCircles == false) {
+//                break;
+//            }
+//        }
 
     }
 

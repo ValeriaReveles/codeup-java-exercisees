@@ -14,16 +14,18 @@ public class Circle {
     private double radius;
 
     public Circle(double radius) {
+
         this.radius = radius;
     }
 
     public double getArea(){
-        double area = Math.PI * radius * radius;
+        double area = Math.PI * this.radius * this.radius;
         return area;
     }
 
     public double getCircumference(){
-        double circumference = Math.PI * 2 * radius;
+        double circumference = Math.PI * 2 * this.radius;
         return circumference;
     }
+
 }
