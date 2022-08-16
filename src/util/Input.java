@@ -53,13 +53,11 @@ public class Input {
         }
     }
 
-    //Refactored with exceptions:
-
+//Original code without exceptions:
     //    public int getInt(){
 ////        System.out.println("your int is: ");
 //        return scanner.nextInt();
 //    }
-
 
 
 
@@ -78,10 +76,17 @@ public class Input {
 //        }
 //    }
 
-    //double get int:
+
+    //double get int with exceptions:
+
     public double getDouble(){
-//        System.out.println("your int is: ");
-        return scanner.nextDouble();
+        while(true){
+            try{
+                return Double.parseDouble(getString());
+            } catch (NumberFormatException e) {
+                System.out.println("Double wrong-o!");
+            }
+        }
     }
 
 
@@ -99,6 +104,14 @@ public class Input {
             return userDouble;
         }
     }
+
+
+//Original code without exceptions:
+//    public double getDouble(){
+////        System.out.println("your int is: ");
+//        return scanner.nextDouble();
+//    }
+
 
 
 
