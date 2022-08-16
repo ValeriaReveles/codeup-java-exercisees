@@ -18,5 +18,11 @@ public class StudentTest {
         System.out.println(draco.getName() + "'s grade average is " + draco.getGradeAverage());
         System.out.println(draco.getName() + "'s grades for the semester were: " + draco.getGrades());
 
+        Student ron = new Student("Ron");
+       ron.addGrade(70);
+       ron.addGrade(89);
+       ron.addGrade(95);
+        System.out.println(ron.getName() + "'s grade average is " + ron.getGradeAverage());
+        System.out.println(ron.getName() + "'s grades for the semester were: " + ron.getGrades());
     }
 }
