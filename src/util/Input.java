@@ -29,8 +29,13 @@ public class Input {
 
 
     public int getInt(){
-//        System.out.println("your int is: ");
-        return scanner.nextInt();
+        while(true){
+            try{
+                return Integer.parseInt(getString());
+            } catch (NumberFormatException e){
+                System.out.println("Wrong-o!");
+            }
+        }
     }
 
     public int getInt(int min, int max) {
@@ -48,10 +53,40 @@ public class Input {
         }
     }
 
-    //double get int:
+//Original code without exceptions:
+    //    public int getInt(){
+////        System.out.println("your int is: ");
+//        return scanner.nextInt();
+//    }
+
+
+
+//    public int getInt(int min, int max) {
+//
+//        System.out.println("Enter a number between " + min + " and " + max);
+//
+//        int userInput = scanner.nextInt();
+//
+//        if (userInput < min || userInput > max) {
+//            System.out.println("That's not in-between 1 and 10...");
+//            return getInt(min, max);
+//        } else {
+//            System.out.println("Your number is: " + userInput);
+//            return userInput;
+//        }
+//    }
+
+
+    //double get int with exceptions:
+
     public double getDouble(){
-//        System.out.println("your int is: ");
-        return scanner.nextDouble();
+        while(true){
+            try{
+                return Double.parseDouble(getString());
+            } catch (NumberFormatException e) {
+                System.out.println("Double wrong-o!");
+            }
+        }
     }
 
 
@@ -69,6 +104,14 @@ public class Input {
             return userDouble;
         }
     }
+
+
+//Original code without exceptions:
+//    public double getDouble(){
+////        System.out.println("your int is: ");
+//        return scanner.nextDouble();
+//    }
+
 
 
 
