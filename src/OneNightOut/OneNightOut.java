@@ -9,6 +9,11 @@ public class OneNightOut {
 
     public static void main(String[] args) {
         mainMenu();
+        phoneChoices();
+        answerPhone();
+        start();
+        playerSelection();
+
 
 
     }
@@ -20,7 +25,7 @@ public class OneNightOut {
         if (mainMenuUserResponse.equalsIgnoreCase("start")) {
             start();
         } else if (mainMenuUserResponse.equalsIgnoreCase("exit")) {
-            close();
+
         } else if (mainMenuUserResponse.equalsIgnoreCase("how to play")) {
             System.out.println("""
                     One Night Out is a console based, mini story game.
@@ -71,7 +76,7 @@ public class OneNightOut {
                     Attack = 20
                     playerStatus = Not you
                     """);
-            System.out.println("Enter a valid class!");
+            System.out.println("Are you sure about that? Please enter a valid class!");
             playerSelection();
         } else if (playerClass.equalsIgnoreCase("wizard")) {
             System.out.println("""
@@ -79,7 +84,7 @@ public class OneNightOut {
                     playerAtk = 0
                     playerStatus = You need to be smart for this class.
                     """);
-            System.out.println("Enter a valid class!");
+            System.out.println("Seriously? I said a VALID class!");
             playerSelection();
 
         } else {
@@ -96,7 +101,7 @@ public class OneNightOut {
 
 
     public static void storyStart() {
-        System.out.print("Is that a whisky bottle in your hands or are you just happy to see me?\n" + playerStatus);
+        System.out.print("Hold on, is that a whisky bottle in your hands or are you just happy to see me?\n" + playerStatus);
         userAction = scanner.nextLine();
         if (userAction.equalsIgnoreCase("shut up") || userAction.equalsIgnoreCase("no")) {
             System.out.println("Oooofff tough crowd. Fine! Enjoy the silence loser.");
@@ -127,9 +132,9 @@ public class OneNightOut {
             System.out.println("Wait come back, I was just kidding! Just answer the damn thing!");
             System.out.println("Oh I just LOVE hearing a phone ring on and on and on and on and on....");
             answerPhone();
-        }else if (userAction.equalsIgnoreCase("no"){
+        }else if (userAction.equalsIgnoreCase("no")){
             System.out.println("Well then what are we waiting for, answer already!");
-            answer
+            answerPhone();
         }
 
         //To be continued:
