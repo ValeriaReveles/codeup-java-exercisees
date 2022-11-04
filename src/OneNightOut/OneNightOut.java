@@ -31,7 +31,7 @@ public class OneNightOut {
                     One Night Out is a console based, mini story game.
                     It is quite simple really: you are invited to a fun night out with friends. Should you go or should you stay?
                     Let's see...good times and better drinks? YES PLEASE!
-                    After all, how hard can overcoming a little, totally not deadly vice be?
+                    After all, how hard can overcoming a little vice be?
                     """);
             System.out.println("--------------------------------");
             System.out.println("Controls:");
@@ -76,7 +76,13 @@ public class OneNightOut {
                     Attack = 20
                     playerStatus = Not you
                     """);
-            System.out.println("Are you sure about that? Please enter a valid class!");
+            System.out.println("""
+            
+            ****************************************************
+            Are you sure about that? Please enter a valid class!
+            ****************************************************
+            
+            """);
             playerSelection();
         } else if (playerClass.equalsIgnoreCase("wizard")) {
             System.out.println("""
@@ -84,17 +90,26 @@ public class OneNightOut {
                     playerAtk = 0
                     playerStatus = You need to be smart for this class.
                     """);
-            System.out.println("Seriously? I said a VALID class!");
+            System.out.println("""
+            ***********************************
+            Seriously? I said a VALID class!
+            ***********************************
+            
+            """);
             playerSelection();
 
         } else {
             System.out.println("""
-                    Was there really any other option for you?
-                    playerDef = 0
-                    playerAtk = 0
-                    playerStatus = Perfect match!
+                    
+            ******************************************
+            Was there really any other option for you?
+            playerDef = 0
+            playerAtk = 0
+            playerStatus = PERFECT MATCH!
+            *******************************************
+            
                     """);
-            System.out.println("Let's begin shall we?");
+            System.out.println("Great! Let's begin shall we?");
             storyStart();
         }
     }
